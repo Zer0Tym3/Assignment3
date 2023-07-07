@@ -1,2 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+
+
+class FeistelCipher
+{
+    static void Main(String[] args)
+    {
+
+    }
+    private static int randomKey(int keyLength)
+    {
+        return 0;
+    }
+}
