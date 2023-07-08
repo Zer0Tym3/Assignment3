@@ -1,7 +1,4 @@
-﻿
-
-
-class FeistelCipher
+﻿class FeistelCipher
 {
     static void Main(String[] args)
     {
@@ -10,5 +7,11 @@ class FeistelCipher
     private static int randomKey(int keyLength)
     {
         return 0;
+    }
+    private static string FeistelCipherRound(string input, string key)
+    {
+
+
+        return "";
     }
 }
