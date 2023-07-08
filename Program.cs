@@ -1,5 +1,8 @@
-﻿class FeistelCipher
+﻿using System.Text;
+
+class FeistelCipher
 {
+    public static Encoding ascii = Encoding.ASCII;
     static void Main(String[] args)
     {
         string input = "01111010";
@@ -19,10 +22,6 @@
     }
     private static string FeistelCipherRound(string input, string key)
     {
-        //Step 1: Taking Input
-
-
-
         //Step 2: Splitting of String
         string leftZ = input.Substring(0, 4);
         string rightZ = input.Substring(4, 4);
@@ -44,5 +43,12 @@
         string cipherT = rightO + leftO;
 
         return cipherT;
+    }
+    private static List<String> strToBin (string input)
+    {
+        List<char> charL = new List<char>(input.ToCharArray());
+        List<Byte> byteL = new List<Byte>(ascii.GetBytes(charL.ToArray()));
+        List<string> binL = new List<string>(byteL.ToArray().Select(x => Convert.ToString(x, 2).PadLeft(8, '0')).ToArray());
+        return binL;
     }
 }
