@@ -70,6 +70,7 @@ class FeistelCipher
         string cipherT = rightO + leftO;
         return cipherT;
     }
+    //From Assignment 1, Converting String to Binary
     private static List<String> strToBin (string input)
     {
         List<char> charL = new List<char>(input.ToCharArray());
