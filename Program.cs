@@ -77,12 +77,4 @@ class FeistelCipher
         List<string> binL = new List<string>(byteL.ToArray().Select(x => Convert.ToString(x, 2).PadLeft(8, '0')).ToArray());
         return binL;
     }
-    private static List<String> strToBin (string input)
-    {
-        List<char> tempC = new List<char>(input.ToCharArray());
-        List<Byte> tempB = new List<Byte>(ascii.GetBytes(tempC.ToArray()));
-        List<string> binOut = new List<string>(tempB.ToArray().Select(x => Convert.ToString(x, 2).PadLeft(8, '0')).ToArray());
-        return binOut;
-    
-    }
 }
